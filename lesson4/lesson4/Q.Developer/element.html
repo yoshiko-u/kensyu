@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>element</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<h1>デベロッパーツールを使いこなそう</h1>
+		<nav>
+			<ul>
+				<li><a href="side.html">横並び</a></li>
+				<li><a href="position.html">potition</a></li>
+				<li><a href="element.html">擬似</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1>擬似要素とは</h1>
+		<p>セレクターに付加するキーワードで、要素の「特定の部分」にスタイル付けができる。<br>
+		擬似要素は擬似クラスと区別するためにcss３から二重コロン（::）を使用。<br>
+		コロン（：）でも機能するものあるが「幅広いブラウザに対応させたい」等、特別な理由がない限り二重コロンを使う事。<br>
+		擬似要素一例は以下</p>
+		<div class="demo">
+			<table>
+				<tr>
+					<th>要素名</th>
+					<th>概要</th>
+				</tr>
+				<tr>
+					<td>::after</td>
+					<td>指定した要素の「直後」に擬似要素を作成</td>
+				</tr>
+				<tr>
+					<td>::before</td>
+					<td>指定した要素の「直前」に擬似要素を作成</td>
+				</tr>
+			</table>
+			<p class="teach">
+			下のDEMOでは★と♡を入れてるけど、floatを解除したい位置に空の擬似要素を入れて、clear:both;をかけるのがclearfixだね。<br>
+			装飾をするのにもよく使うし、使う機会は多いかも。</p>
+			<p>HTML</p>
+			<pre>
+				<code>
+				&lt;p&gt;これはテストです&lt;p&gt;
+				</code>
+			</pre>
+			<p>CSS</p>
+			<pre>
+				<code>
+				p::befor{
+				content: "★";
+				}
+				p::after{
+				content: "♡";
+				}
+				</code>
+			</pre>
+			<p>結果</p>
+<!--↓Q5★をKENに♡をstyleに書き直して！↓-->
+			<p class="bforafte">これはテストです</p>				
+		</div>
+		<div class="demo">
+			<table>
+				<tr>
+					<th>要素名</th>
+					<th>概要</th>
+				</tr>
+				<tr>
+					<td>::first-line</td>
+					<td>ブロック要素の最初の「行」にスタイルを適用。<br>
+					行の為、要素の幅や文章の長さに左右されることに注意。</td>
+				</tr>
+			</table>
+			<p class="teach">
+			あんまり使った事ないけれど、&lt;br&gt;と組み合わせれば色々な使い方ができそう。</p>
+			<p>HTML</p>
+			<pre>
+				<code>
+				&lt;p&gt;ブラウザの幅を狭めてみてください…省略…これはテストですブラウザの幅を狭めてみてください&lt;p&gt;
+				</code>
+			</pre>
+			<p>CSS</p>
+			<pre>
+				<code>
+				p::firstLine{
+				color: pink;
+				}</code>
+			</pre>
+			<p>結果</p>
+			<p class="firstLine">ブラウザの幅を狭めてみてくださいこれはテストですこれはテストですこれはテストですこれはテストですこれはテストですこれはテストですこれはテストですこれはテストですこれはテストですこれはテストですこれはテストですブラウザの幅を狭めてみてください</p>	
+		</div>
+			<div class="demo">
+			<h1>擬似クラスとは</h1>
+			<p>セレクターに付加するキーワードで、選択された要素に対して「特定の状態」時にスタイル付けができる。<br>
+			擬似クラスには.classを扱う事はできない。<br>
+			擬似クラスの一例は以下</p>
+			</div>
+			<div class="demo">
+			<table>
+				<tr>
+					<th>要素名</th>
+					<th>概要</th>
+				</tr>
+				<tr>
+					<td>:hover</td>
+					<td>指定した要素の上にカーソルが乗った際のスタイルを指定</td>
+				</tr>
+			</table>
+				<p class="teach">
+				メニューや&lt;a&gt;にちょっとしたUIをつけたい時によく使うね。</p>
+				<p>HTML</p>
+				<pre>
+					<code>
+					&lt;p&gt;これはテストです&lt;p&gt;
+					</code>
+				</pre>
+				<p>CSS</p>
+				<pre>
+					<code>
+					p:hover{
+					color: pink;
+					}
+					</code>
+				</pre>
+				<p>結果</p>
+<!--↓Q6.hoverした時色がblueになるようにして！↓-->
+				<p class="hover">これはテストです</p>				
+			</div>
+			<div class="demo">
+				<table>
+					<tr>
+						<th>要素名</th>
+						<th>概要</th>
+					</tr>
+					<tr>
+						<td>:nth-child(n)</td>
+						<td>「n番目のE要素」にスタイルを指定する際に使います。<br>
+						</td>
+					</tr>
+				</table>
+				<p class="teach">
+				nの部分には整数・奇数(odd)偶数(even)数式を指定できます。<br>
+				テーブルやリストの装飾に便利ですね。<br>
+				数式というと難しく感じるかもしれませんが奇数の時この色！とかここからここまではこうする！等様々な指定ができます。<br>
+				数式は調べるといろいろ出てきますヨ。</p>
+				<p>HTML</p>
+				<pre>
+					<code>
+					&lt;ul&gt;
+					&lt;li&gt;これはテストです&lt;li&gt;
+					&lt;li&gt;これはテストです&lt;li&gt;
+					&lt;li&gt;これはテストです&lt;li&gt;
+					&lt;li&gt;これはテストです&lt;li&gt;
+					&lt;li&gt;これはテストです&lt;li&gt;
+					&lt;ul&gt;
+					</code>
+				</pre>
+				<p>CSS</p>
+				<pre>
+					<code>
+					li:nth-child(2n){
+					color: pink;
+					}</code>
+				</pre>
+				<p>結果</p>
+				<div class="nth">
+					<ul>
+						<li>これはテストです</li>
+						<li>これはテストです</li>
+						<li>これはテストです</li>
+						<li>これはテストです</li>
+						<li>これはテストです</li>
+					</ul>
+				</div>	
+		</div>
+	</main>
+	<footer>
+		<p>2019 BREEZE Group</p>
+	</footer>
+</body>
+<!-- Q.EX <p>の後ろに"★"がつくようにして！ -->
+</html>

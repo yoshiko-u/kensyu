@@ -1,0 +1,217 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*このCSSはrem指定だけにしてるよ*/
+
+/*基本設定*/
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	font-family: 'Yu Gothic UI',YuGothic,'Yu Gothic',sans-serif;
+/*↓ここでremの基本サイズを指定*/
+	font-size: 10px;
+}
+body{
+	position: relative;
+}
+h1{
+	font-size: 5rem;
+}
+li{
+	font-size: 3rem;
+}
+p{
+	font-size: 2rem;
+}
+
+/*ヘッダーメニューの記述*/
+header{
+	width: 100%;
+	position: fixed;
+	top:0;
+	border-bottom: solid 2rem #FF771D;
+	background: #FFF9D5;
+	text-align: center;
+	overflow: hidden;
+	height: 15rem;
+}
+ul{
+	list-style: none;
+}
+li{
+	float: right;
+	padding: 0 1rem;
+	border-left: solid 0.2rem #FF771D;
+}
+li:last-child{
+	border-left: none;
+}
+nav{
+	margin: 2rem;
+}
+a{
+	color:#FF771D;
+	text-decoration: none;
+}
+a:hover{
+	color: #fff;
+}
+main{
+	width: 80%;
+	margin: 17rem auto;
+}
+
+/*ここからboxの準備*/
+img{
+	width: 20rem;
+	border-radius: 50%;
+}
+.box{
+	width: 30rem;
+	height: 30rem;
+	background: #64BAE7;
+}
+.boxTow{
+	width: 30rem;
+	height: 30rem;
+	background: #B1DEE9;
+}
+/*フッターの設定*/
+footer{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20rem;
+	background: #FF771D;
+}
+footer p{
+	display: block;
+}
+/*ふきだしの設定*/
+.content{
+	z-index: -1;
+	position: relative;
+}
+.comment {
+	position: relative;
+	display: inline-block;
+	margin: 1.5em 0 1.5em 3rem;
+	padding: 0.7rem 1rem;
+	min-width: 12rem;
+	max-width: 100%;
+	color: #555;
+	background: #e0edff;
+	border-radius: 1rem;
+}
+
+.comment::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-right: 15px solid #e0edff;
+}
+/*floatの設定*/
+
+.clear{
+	clear: both;
+}
+.kenStyle{
+	float:left;
+}
+#float::after{
+	clear: both;
+	display: block;
+	content:" ";
+}
+.clearfix::after{
+	display: flex;
+}
+.clear{
+	clear: both;
+}
+
+/*inline-blockの設定*/
+#inLineBlock{
+	text-align: left;
+	font-size: 0;
+}
+.blackDragon{
+	display: inline-block;
+}
+
+.clearfix::after{
+	display: flex;
+}
+
+
+/*Flexの設定*/
+#flex{
+	display: flex;
+}
+
+
+/*テーブルの設定*/
+table{
+	border-collapse: collapse;
+	border: solid 0.5rem #B1DEE9;
+}
+th{	
+	padding: 0.5rem;
+	font-size: 2rem;
+	font-weight: 300;
+	background: #64BAE7;
+	color: #fff;
+}
+td{
+	padding: 0.2rem;
+	border: solid 0.2rem #B1DEE9;
+	font-size: 2rem;
+}
+pre{
+	font-size: 1.3rem;
+	border:solid 0.1rem #64BAE7;
+}
+.teach{
+	margin: 1rem 0;
+	padding: 1rem 0;
+	background: #E3F3F1;
+	color: #64BAE7;
+}
+.demo{
+	padding: 2rem 0;
+	margin: 5rem 0;
+	border-top:solid 0.3rem #FF771D;
+}
+.bforafte::before{
+	content:"★";
+}
+.bforafte::after{
+	content:"♡";
+}
+.firstLine::first-line{
+	color: pink;
+}
+.hover:hover{
+	color:pink;
+}
+.nth li{
+	font-size: initial; 
+	float: initial;
+	padding: initial;
+	border-left: initial;
+}
+.nth li:nth-child(2n){
+	color:pink;
+}
+
+.whitepegasus:hover{
+
+	background: black;
+}

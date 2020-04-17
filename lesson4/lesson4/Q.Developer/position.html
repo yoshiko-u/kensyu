@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>position</title>
+	<link rel="stylesheet" type="text/css" href="css/positionstyle.css">
+</head>
+<body>
+	<div class="relative wrapper">
+		<div class="box3 "></div>
+		<p>指定のないbox（static）</p>
+<!--↓Q3-1このdivにclass"relative"を与えて！↓-->
+		<div class="relative"><div class="box"></div></div>
+<!--↓Q3-2position:absolete; right:0;にして！↓-->
+			<div class="box2"></div>	
+		</div>
+		<p>リレイティブ指定してあるbox</p>
+		<div class="box relative">
+		relative
+			<div class="box2 absolute">
+				position: absolute;
+				left: 50px;
+				top: 50px;
+			</div>
+		</div>
+
+		<p>左上にずっといるのがfixedしたbox</p>
+<!--↓Q4このボックスが.footerの上に重なるようにして！-->
+		<div class="box2 fixed">
+			position: fixed;
+			bottom: 0px;
+		</div>
+		<p class="comment"><span style="color:red;" class="blink">一番下のboxに注目！</span>ボックスが重なっています。<br>
+		普段HTML/CSSは積み木に近いですが、potitionは紙を重ねる感覚なので重なってしまいます。<br>
+		前にしたい・後ろにしたい要素を決めてz-indexプロバティで前後の関係を定めてあげる必要があります。</p>
+		<div class="footer absolute2">
+			親のリレイティブに対してアブソリュートをかけて一番下に固定！
+			position: absolute;
+			bottom: 0;
+		</div>
+			<nav class="menu">
+		<ul>
+			<li><a href="side.html">横並び</a></li>
+			<li><a href="position.html">potition</a></li>
+			<li><a href="element.html">擬似</a></li>
+		</ul>
+	</nav>
+	</div>
+</body>
+<!-- Q.EX class="warapper"の直下に、好きな色・サイズの　新しいdiv を作り、右下角に配置して！ -->
+</html>

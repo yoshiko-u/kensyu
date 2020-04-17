@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header>
+		<h1>デベロッパーツールを使いこなそう</h1>
+		<nav>
+			<ul>
+				<li><a href="side.html">横並び</a></li>
+				<li><a href="position.html">potition</a></li>
+				<li><a href="element.html">擬似</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div class="content">
+			<h1>フロート</h1>
+			<img src="img/hikasa.jpg" alt="KEN">
+			<div class="comment">
+				<p>
+				floatは基本的には文字を画像に周りこませたい時に使うんだ。<br>
+				floatを使うと高さが失われ、下の要素にまで影響を与える特性がある。<br>
+				overflow:hidden;やheightを指定して高さを保ったり、<br>
+				clear:both;やclearfixで解除しないといけないよ！
+				</p>
+			</div>
+		</div>
+		<div id="float">
+			<div class="clearfix">
+			<div class="kenStyle box"></div>
+			<div class="kenStyle boxTow"></div>
+			<div class="kenStyle box"></div>
+		    </div>
+<!--Q1↓clearFixを解除してこのdiv class="clear"にclear:both;して！↓-->
+             
+			<div class="clear"></div>
+		</div>
+		
+		<div class="content">
+			<h1>インラインブロック</h1>
+			<img src="img/hotta.jpg" alt="白い巨匠">
+			<div class="comment">
+				<p>
+				display:inline-block;とはブロックの性質のままインライン的な動きができるようにするんだ。<br>
+				気軽に使えて便利だね！僕はよく使うよ。<br>
+				でもよく見て欲しい、隙間があるね。<br>
+				そう、これは、インライン要素の特性も付いてしまっているからなんだ。<br>
+				font-sizeを０にしたり、回避方法はあるけれど…<br>
+				ぴったりつけたいレイアウトの時は一手間かかっちゃってなぁ〜…
+				</p>
+			</div>
+		</div>
+<!--Q2↓インラインブロックの横並びを解除してdisplay:flex;で並べ直して！↓-->
+		<div id="inLineBlock" >
+			<div class="clearfix">
+			<div class="blackDragon box"></div>
+			<div class="blackDragon boxTow"></div>
+			<div class="blackDragon box"></div>
+		    </div>
+		</div>
+		
+		<div class="content" >
+			<h1>フレックス</h1>
+			<img src="img/sasaoka.jpg" alt="黒い巨匠">
+			<div class="comment">
+				<p>
+					ででででました！2019年現在主流！チート級！<br>
+					flexを使えば横並びどころかカラムやmenuも簡単に作れちゃう！<br>
+					全部flexでいいじゃん！と思ったあなた。<br>
+					<span style="color: red;">ブラウザの幅を可変してみて！</span><br>
+					それぞれの特性を理解して、用途に見合った使い方をしなきゃだめだぞ！
+				</p>
+			</div>
+		</div>
+		<div id="flex">
+			<div class="whitePegasus box"></div>
+			<div class="whitePegasus boxTow"></div>
+			<div class="whitePegasus box"></div>
+		</div>
+	</main>
+	<footer>
+		<p>2019 BREEZE Group</p>
+	</footer>
+</body>
+<!-- Q.EX インラインブロックの隙間を消して！ -->
+<!-- Q.EX class="whitePegasus"に:hoverした時background:black;にして！ -->
+</html>
