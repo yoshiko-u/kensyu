@@ -34,3 +34,4 @@ class Keisan3 {
         System.out.println(num1);
     }
 }
+
