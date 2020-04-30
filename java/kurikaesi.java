@@ -45,3 +45,44 @@ public class ContinueTest{
         }
     }
 }
+
+public static void multiParameMethod(int a, int b){
+    System.out.println(a*b)
+}
+
+public class MethodTest{
+    public static void main(String[]args){
+        int a = 10;
+        mltiParameterMethod(a,20);
+    }
+    public static void multiParameterMethod(int a, int b){
+        System.out.println(a*b);
+    }
+}
+
+public classMethodTest{
+    public static void main(String[]args){
+        returnableValue();
+    }
+    public static void returnableValue(){
+        int tmp = 100;
+        return tmp;
+    }
+}
+
+public static int returnableValue(){
+    int tmp = 100;
+    return tmp;
+}
+
+public class MethodTest{
+    public static void main(String[] args){
+        int val = returnableValue();
+        System.out.println(val);
+    }
+    public static int returnableValue(){
+        int tmp = 100;
+        return tmp;
+    }
+}
+
